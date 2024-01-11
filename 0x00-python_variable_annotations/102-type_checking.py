@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """0x00-python_variable_annotations"""
-from typing import Tuple, List, Union
+from typing import Tuple, List, Union, Generator
 
 
-def zoom_array(lst: List, factor: int = 2) -> List:
-    zoomed_in: List = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    zoomed_in: Generator = (
         item for item in lst
         for i in range(factor)
-    ]
-    return zoomed_in
+	)
+    return list(zoomed_in)
 
 
-array = [12, 72, 91]
+array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
