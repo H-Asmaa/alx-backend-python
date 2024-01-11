@@ -3,6 +3,6 @@
 
 
 def floor(n: float) -> int:
-    """A function that uses variable annotation, to do the sum
-    of two floats."""
+    """A function that uses variable annotation, and returns the
+    floor of a number n."""
     return int(n)
