@@ -55,7 +55,7 @@ class TestGetJson(unittest.TestCase):
     )
     def test_get_json(self, testUrl, testPayload):
         """A method that tests the return of get_json."""
-        with patch("utils.requests.get") as mockGet:
+        with patch("requests.get") as mockGet:
             mockResponse = mockGet.return_value
             mockResponse.json.return_value = testPayload
             result = get_json(testUrl)
